@@ -6,1495 +6,1434 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+  integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <style>
-html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif}
-/* https://en.wikipedia.org/wiki/Saffron_(color)#India_saffron_or_deep_saffron */
-.sria91-text-indiasaffron{color:#ff9933 !important}.sria91-indiasaffron{color:#ffffff !important;background-color:#ff9933 !important}
-/* https://en.wikipedia.org/wiki/Variations_of_green#India_green */
-.sria91-text-indiagreen{color:#138808 !important}.sria91-indiagreen{color:#ffffff !important;background-color:#138808 !important}
-/* https://en.wikipedia.org/wiki/Navy_blue */
-.sria91-text-navyblue{color:#000080 !important}.sria91-navyblue{color:#ffffff !important;background-color:#000080 !important}
-/* https://en.wikipedia.org/wiki/Navy_blue#Bright_navy_blue */
-.sria91-text-bright-navyblue{color:#1974d2 !important}.sria91-bright-navyblue{color:#ffffff !important;background-color:#1974d2 !important}
+  html,
+  body,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Roboto", sans-serif
+  }
+
+  /* https://en.wikipedia.org/wiki/Saffron_(color)#India_saffron_or_deep_saffron */
+  .sria91-text-indiasaffron {
+    color: #ff9933 !important
+  }
+
+  .sria91-indiasaffron {
+    color: #ffffff !important;
+    background-color: #ff9933 !important
+  }
+
+  /* https://en.wikipedia.org/wiki/Variations_of_green#India_green */
+  .sria91-text-indiagreen {
+    color: #138808 !important
+  }
+
+  .sria91-indiagreen {
+    color: #ffffff !important;
+    background-color: #138808 !important
+  }
+
+  /* https://en.wikipedia.org/wiki/Navy_blue */
+  .sria91-text-navyblue {
+    color: #000080 !important
+  }
+
+  .sria91-navyblue {
+    color: #ffffff !important;
+    background-color: #000080 !important
+  }
+
+  /* https://en.wikipedia.org/wiki/Navy_blue#Bright_navy_blue */
+  .sria91-text-bright-navyblue {
+    color: #1974d2 !important
+  }
+
+  .sria91-bright-navyblue {
+    color: #ffffff !important;
+    background-color: #1974d2 !important
+  }
 </style>
+
 <body class="w3-white">
 
-<!-- Navbar -->
-<div id="navbar" class="w3-top">
-  <div class="w3-bar sria91-indiasaffron w3-card w3-left-align w3-large">
-    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large sria91-indiasaffron" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-white"><b>We</b><i title="सु ~ ಸು ~ good, excellent, right, virtuous, beautiful, easy, well, rightly, very, any, easily, willingly, quickly, immediately">su</i><u title="medium">me</u></a>
-    <a href="#skills" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Skills</a>
-    <a href="#competencies" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Competencies</a>
-    <a href="#natural-languages" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Languages</a>
-    <a href="#experience" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Experience</a>
-    <a href="#education" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Education</a>
-    <a href="#projects" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Projects</a>
-    <a href="#publications" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Publications</a>
-    <a href="#certifications" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Certifications</a>
-    <a href="https://blog.srikanth.one/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Blog</a>
-    <a href="/pdf/SA_Resume.pdf" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">CV</a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navbar-small" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
-    <a href="#skills" class="w3-bar-item w3-button w3-padding-large">Skills</a>
-    <a href="#competencies" class="w3-bar-item w3-button w3-padding-large">Competencies</a>
-    <a href="#natural-languages" class="w3-bar-item w3-button w3-padding-large">Languages</a>
-    <a href="#experience" class="w3-bar-item w3-button w3-padding-large">Experience</a>
-    <a href="#education" class="w3-bar-item w3-button w3-padding-large">Education</a>
-    <a href="#projects" class="w3-bar-item w3-button w3-padding-large">Projects</a>
-    <a href="#publications" class="w3-bar-item w3-button w3-padding-large">Publications</a>
-    <a href="#certifications" class="w3-bar-item w3-button w3-padding-large">Certifications</a>
-    <a href="https://blog.srikanth.one/" class="w3-bar-item w3-button w3-padding-large">Blog</a>
-  </div>
-</div>
-
-<!-- Page Container -->
-<div class="w3-content w3-margin-top" style="max-width:1400px;padding:48px 0px 0px 0px">
-
-  <!-- The Grid -->
-  <div class="w3-row-padding">
-
-    <!-- Left Column -->
-    <div class="w3-third">
-
-      <div class="w3-white sria91-text-navyblue w3-card-4">
-        <div class="w3-display-container">
-          <img src="SrikanthAnantharam.jpg" style="width:100%" alt="Avatar">
-        </div>
-        <div class="w3-container sria91-text-navyblue">
-          <h1>Srikanth Anantharam</h1>
-          <p><i class="fa fa-laptop-code fa-fw w3-margin-right w3-large sria91-text-navyblue"></i>Software Practitioner | Lifelong Learner</p>
-          <p><i class="fa fa-home fa-fw w3-margin-right w3-large sria91-text-navyblue"></i>Beṅgaḷūru, India</p>
-          <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large sria91-text-navyblue"></i><a href="mailto:contact@srikanth.one">contact@srikanth.one</a></p>
-          <p><i class="fa fa-phone fa-fw w3-margin-right w3-large sria91-text-navyblue"></i><a href="tel:+917204350429">+91 7204 350 429</a></p>
-          <hr>
-
-          <p class="w3-large" id="skills"><b><i class="fa fa-asterisk fa-fw w3-margin-right sria91-text-navyblue"></i>Soft Skills</b></p>
-          <p>Team Player</p>
-          <p>Collaborator</p>
-          <p>Communicator</p>
-          <p>Innovator</p>
-          <p>Planner</p>
-          <p>Thinker</p>
-          <hr>
-
-          <p class="w3-large w3-text-theme" id="competencies"><b><i class="fa fa-list fa-fw w3-margin-right sria91-text-navyblue"></i>Core Competencies</b></p>
-          <p>Embedded Systems</p>
-          <p>Systems Programming</p>
-          <p>Web Development</p>
-          <p>Application Development</p>
-          <p>Automation and Robotics Engineering</p>
-          <p>Image Processing and Computer Vision</p>
-          <p>Image Analysis and Pattern Recognition</p>
-          <p>Artificial Intelligence</p>
-          <p>Requirements Gathering</p>
-          <p>Testing and Troubleshooting</p>
-          <p>DevOps Engineering</p>
-          <p>Client Relationship Management</p>
-          <hr>
-
-          <p class="w3-large w3-text-theme" id="natural-languages"><b><i class="fa fa-language fa-fw w3-margin-right sria91-text-navyblue"></i>Natural Languages</b></p>
-          <p>English</p>
-          <p>Kannada</p>
-          <p>Hindi</p>
-          <p>Telugu</p>
-        </div>
-      </div><br>
-
-    <!-- End Left Column -->
+  <!-- Navbar -->
+  <div id="navbar" class="w3-top">
+    <div class="w3-bar sria91-indiasaffron w3-card w3-left-align w3-large">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large sria91-indiasaffron"
+        href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-white"><b>We</b><i
+          title="सु ~ ಸು ~ good, excellent, right, virtuous, beautiful, easy, well, rightly, very, any, easily, willingly, quickly, immediately">su</i><u
+          title="medium">me</u></a>
+      <a href="#skills" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Skills</a>
+      <a href="#competencies"
+        class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Competencies</a>
+      <a href="#natural-languages"
+        class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Languages</a>
+      <a href="#projects" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Projects</a>
+      <a href="#publications"
+        class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Publications</a>
+      <a href="#certifications"
+        class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Certifications</a>
+      <a href="https://blog.srikanth.one/"
+        class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Blog</a>
+      <a href="/pdf/SA_Resume.pdf" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">CV</a>
     </div>
 
-    <!-- Right Column -->
-    <div class="w3-twothird">
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom" id="highlights">
-        <h2 class="sria91-text-navyblue w3-padding-16"><i class="fa fa-highlighter fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Highlights</h2>
-        <div class="w3-container sria91-text-navyblue">
-          <ul>
-            <li>An achievement-driven <b>versatile Software Practitioner with nearly 8 years of rich and extensive experience</b></li>
-            <li><b>Skilled at analyzing information system needs</b>, evaluating end-user requirements, designing custom solutions and troubleshooting complex information systems</li>
-            <li><b>Multi-disciplinary exposure gained by working</b> in a variety of proofs-of-concept & projects related to Sensor Fusion, Robotics, Image Processing, Embedded Systems, Internet of Things, Artificial Intelligence, Test Automation & Functional Safety</li>
-            <li><b>Proficient at maintaining quality of applications</b>, delivering high-quality customer experience while adhering to the SLAs and work processes</li>
-            <li>Experienced in using various <b>software development methodologies such as Agile</b>, Scrum, Waterfall, etc</li>
-            <li>Capable of <b>recognizing prospects to improve current software</b> by employing innovative problem-solving techniques, optimizing code, and strategically integrating new features</li>
-            <li>Extensive experience in developing applications using various programming languages <b>such as Rust, Python, C++, C</b> and MATLAB; also familiar with C#, HTML, CSS and JavaScript</li>
-            <li>Well versed in using <b>Linux and Windows</b> operating systems; also familiar with <b>macOS</b></li>
-            <li><b>Highly skilled in Build / Release / Software Configuration using various DevOps tools</b> such as Visual Studio, Visual Studio Code, Eclipse, PyCharm, MATLAB, Git, GitHub, GitLab, Travis, AppVeyor, Jira, Confluence, Jenkins, MSBuild, CMake, Make, Docker, Kubernetes, AWS, Google Cloud, etc</li>
-            <li>Profound hands-on <b>experience with embedded</b> micro-computers like: NVIDIA Jetson Nano, Intel Movidius NCS, Raspberry Pi, BeagleBoard-xM, Arduino, mbed, 8051</li>
-            <li><b>Experience with hardware/software interfacing technologies</b> like: <abbr title="(U)niversal (A)synchronous (R)eceiver (T)ransmitter">UART</abbr>, <abbr title="(I)nter (I)ntegrated (C)ommunication">I<sup>2</sup>C</abbr>, <abbr title="(S)ystem (M)anagement (Bus)">SMBus</abbr>, <abbr title="(S)erial (P)eripheral (I)nterface">SPI</abbr>, <abbr title="(P)ulse (W)idth (M)odulation">PWM</abbr>, <abbr title="(G)eneral (P)urpose (I)nput (O)output">GPIO</abbr></li>
-            <li><b>Strong work ethic</b>, positive attitude and leadership qualities with ability to work independently and in a team environment</li>
-            <li>Passionate about <b>learning new technologies and keeping up with the latest trends</b></li>
-          </ul>
-        </div>
-        <hr />
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom" id="experience">
-        <h2 class="sria91-text-navyblue w3-padding-16"><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Industrial Experience</h2>
-        <table class="w3-table w3-bordered">
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Lead Rust Engineer @ <a href="https://www.sasken.com/" target="_blank">Sasken Technologies</a> (Remote)</b></h5>
-                <ul>
-                  <li>Developed the ConCal module for managing calibration in an <span title="(S)oftware (D)efined (V)ehicle">SDV</span></li>
-                  <li>Lead a 4-member team in building scalable caching system to serve <span title="(S)imple (S)oftware (S)ervice">S3</span> objects in more regions than where the primary S3 buckets are located</li>
-                  <li>Developed the caching+eviction algorithm and features like database, file handling, http(s) frontend.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2024 &mdash; Present</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Freelancer (Remote)</b></h5>
-                <ul>
-                  <li>DevOps Automation for Embedded build system</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 &mdash; Feb 2024</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Technical Lead @ <a href="https://www.saventech.com/" target="_blank">Saven Nova Technologies</a>, Beṅgaḷūru (Hybrid)</b></h5>
-                <ul>
-                  <li><b>Developing hyper-spectral image processing solutions</b> for object detection and analysis</li>
-                  <li><b>Designing and developing advanced algorithms</b> for dot blot detection and analysis for accurate analysis of biological data</li>
-                  <li><b>Performing linear spectral unmixing of dot blot</b> and western blot images ensuring accurate identification and separation of specific signals</li>
-                  <li><b>Preparing and preprocessing image datasets</b> for analysis, ensuring data quality and consistency</li>
-                  <li><b>Conducting rigorous testing and evaluation</b> of image processing algorithms to assess the accuracy, efficiency and robustness</li>
-                  <li><b>Collaborating with Front-End, Back-End and QA Teams</b>; streamlining end-to-end software development process</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2022 &mdash; Aug 2023</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Senior Analyst @ <a href="https://www.emrit.io/" target="_blank">Emrit Inc</a>, Remote</b></h5>
-                <ul>
-                  <li>Evaluated and deployed openBalena for optimized management of <abbr title="(I)nternet (o)f (T)hings">IoT</abbr> devices</li>
-                  <li>Developed software for implementing secure <abbr title="(O)ver-(T)he-(A)ir">OTA</abbr> firmware updates to the IoT fleet using peer-to-peer model with <abbr title="(I)nter(P)lanetary (F)ile(S)ystem">IPFS</abbr></li>
-                  <li>Streamlined DevOps pipelines for Debian packaging of the OTA software</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2022 &mdash; July 2022</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Senior Engineer @ <a href="https://www.ltts.com/" target="_blank">L&amp;T Technology Services</a>, Beṅgaḷūru</b></h5>
-                <ul>
-                  <li>Developed functional safety software stack for Embedded IoT in C</li>
-                  <li>Automated post-silicon validation with Python 3</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2021 &mdash; May 2022</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Senior Project Engineer @ <a href="https://www.wipro.com/" target="_blank">Wipro Technologies</a>, Beṅgaḷūru</b></h5>
-                <ul>
-                  <li>Maintained software projects related to multimedia analysis for test automation and Windows OS installation for validation</li>
-                  <li>Created <abbr title="(G)raphical (U)ser (I)nterface">GUI</abbr>, adopting an <abbr title="(M)odel-(V)iew-(C)ontroller">MVC</abbr> framework to assist developers in analyzing <abbr title="(G)lobal (N)avigation (S)atellite (S)ystems">GNSS</abbr> logs</li>
-                  <li>Developed backend and <abbr title="(RE)presentational (S)tate (T)ransfer">REST</abbr> <abbr title="(A)pplication (P)rogramming (I)nterface">API</abbr> development for a Chatbot specializing in log analysis</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2019 &mdash; Mar 2021</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Embedded Software Developer @ <a href="https://www.ust.com/" target="_blank"><abbr title="(U)nited (S)tates (T)echnology">UST</abbr></a>, Beṅgaḷūru</b></h5>
-                <ul>
-                  <li>Software design and development with Python.</li>
-                  <li>Firmware development with Embedded C/C++.</li>
-                  <li>Produced robotics & automation solutions by applying Artificial Intelligence, Machine Learning, Deep Learning, Machine Vision and Embedded Systems.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2016 &mdash; Jun 2019</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Industrial Training / Masters' Project Work @ <abbr title="(M)ulti&ndash;(S)ensor (D)ata (F)usion">MSDF</abbr> Group</b>, <b><abbr title="(F)light (M)echanics and (C)ontrol (D)ivision">FMCD</abbr>, <a href="http://www.nal.res.in/" target="_blank"><abbr title="(C)ouncil of (S)cientific and (I)ndustrial (R)esearch">CSIR</abbr> &mdash; <abbr title="(N)ational (A)erospace (L)aboratories">NAL</abbr></a>, Beṅgaḷūru</b></h5>
-                <ul>
-                  <li>Research, Design & Development on Computer Vision & Miniature Aerial Systems.</li>
-                  <li>Published 3 papers.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2014 &mdash; May 2015</h6>
-              </div>
-            </td>
-          </tr>
-
-        </table>
-        <br />
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="sria91-text-navyblue w3-padding-16"><i class="fa fa-briefcase fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Academic / Research Experience</h2>
-        <table class="w3-table w3-bordered">
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Teaching and Research Assistantship (TaRA) @ <a href="http://www.nie.ac.in/department-of-mechanical-engineering/" target="_blank">Mechanical Engineering Department, The National Institute of Engineering</a>, Maisūru</b></h5>
-                <ul>
-                  <li>Worked under <abbr title="(T)echnical (E)ducation (Q)uality (I)mprovement (P)rogramme">TEQIP</abbr>.</li>
-                  <li>Collaborated on:</li>
-                  <ul>
-                    <li>Different multidisciplinary research activities,</li>
-                    <li>Curriculum development of M.Tech. Industrial Automation and Robotics programme.</li>
-                  </ul>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>May 2014 &mdash; May 2015</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Research Associate @ <a href="https://www.nmit.ac.in/" target="_blank">Nitte Meenakshi Institute of Technology</a>, Beṅgaḷūru</b></h5>
-                <ul>
-                  <li>Worked on <a href="https://www.nmit.ac.in/funded-research.php" target="_blank">couple of robotics projects</a> sponsored by <abbr title="(G)overnment (o)f (I)ndia">GoI</abbr> through <a href="http://dst.gov.in/" target="_blank"><abbr title="(D)epartment of (S)cience and (T)echnology">DST</abbr></a> & <a href="https://www.drdo.gov.in/labs-and-establishments/centre-artificial-intelligence-robotics-cair" target="_blank"><abbr title="(C)entre for (A)rtificial (I)ntelligence and (R)obotics">CAIR</abbr>, <abbr title="(D)efence (R)esearch and (D)evelopment (O)rganization">DRDO</abbr></a>.</li>
-                  <li>Contributed to Pick and Place Robot Exhibit project sponsored by IEEE-USA.</li>
-                  <li>Mentored undergraduate students & taught fundamental programming concepts.</li>
-                  <li>Published 2 papers.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2012 &mdash; Jul 2013</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Internship / Bachelors' Project Work @ <a href="https://www.nmit.ac.in/" target="_blank">Nitte Meenakshi Institute of Technology</a>, Beṅgaḷūru</b></h5>
-                <ul>
-                  <li>Exposure towards multi-disciplinary and cross-disciplinary RDD.</li>
-                  <li>RDD on Autonomous Mobile Robotics, Artificial Intelligence & Image Processing.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2010 &mdash; Jun 2012</h6>
-              </div>
-            </td>
-          </tr>
-
-        </table>
-        <br />
-      </div>
-
-      <div class="w3-container w3-card w3-white" id="education">
-        <h2 class="sria91-text-navyblue w3-padding-16"><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Education</h2>
-        <table class="w3-table w3-bordered">
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b><a href="http://www.nie.ac.in/" target="_blank">The National Institute of Engineering</a>, Maisūru</b></h5>
-                <p>Masters &mdash; Industrial Automation and Robotics Technology</p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2013 &mdash; 2015</h6>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b><a href="https://www.nmit.ac.in/" target="_blank">Nitte Meenakshi Institute of Technology</a>, Beṅgaḷūru</b></h5>
-                <p>Bachelors &mdash; Electrical and Electronics Engineering</p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2009 &mdash; 2012</h6>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b><a href="https://sjpolytechnic.karnataka.gov.in/en" target="_blank">Sri Jayachamarajendra Government Polytechnic</a>, Beṅgaḷūru</b></h5>
-                <p>Diploma &mdash; Electrical and Electronics Engineering</p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2006 &mdash; 2009</h6>
-              </div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b><a href="http://www.godwinpublicschool.in/" target="_blank">Godwin Public School</a>, Beṅgaḷūru</b></h5>
-                <p>Secondary School Learning/Leaving Certificate</p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2005 &mdash; 2006</h6>
-                <i class="sria91-text-navyblue">Secured School First Rank</i>
-              </div>
-            </td>
-          </tr>
-        </table>
-        <br />
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom" id="projects">
-        <h2 class="sria91-text-navyblue w3-padding-16"><i class="fa fa-project-diagram fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Industrial Projects</h2>
-        <table class="w3-table w3-bordered">
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Development of ConCal module for SDV</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Rust<br />
-                  <b><i>Platform:</i></b> Android Automotive OS<br />
-                </p>
-                <ul>
-                  <li>Development of ConCal module within the SDV software stack.</li>
-                  <li>The module is responsible for managing the configuration and calibration of the SDV.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2024 &mdash; Oct 2024</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Development of an S3 Cache system</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Rust, Actix, AWS SDK for Rust<br />
-                  <b><i>Platform:</i></b> Linux<br />
-                </p>
-                <ul>
-                  <li>Development of S3 Cache for leading NA based Robo taxi OEM.</li>
-                  <li>Developed the caching+eviction algorithm and features like database, file handling, http(s) frontend.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2024 &mdash; Jul 2024</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>DevOps Automation for Embedded build system</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Yocto, Jenkins<br />
-                  <b><i>Platform:</i></b> Linux<br />
-                </p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 &mdash; Feb 2024</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Design and development of dot blot detection and analysis algorithm</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> C++, Python, OpenCV<br />
-                  <b><i>Platform:</i></b> macOS, Windows, Linux (Cloud)<br />
-                </p>
-                <ul>
-                  <li>Developed an image processing algorithm for detection and analysis of dot blots.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2023 &mdash; Aug 2023</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Linear spectral unmixing of hyperspectral images from dot blot and western blot</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Python<br />
-                  <b><i>Platform:</i></b> Windows<br />
-                </p>
-                <ul>
-                  <li>It is common to see bleed-through in hyperspectral images when there is overlap in the emission spectrum of the contributing fluorophores.</li>
-                  <li>When not accounted for, this bleed-through will lead to inaccurate analysis results.</li>
-                  <li>Developed linear spectral unmixing algorithm for eliminating the bleed-through from a set of images (with up to 4 fluorophores) captured by a widefield microscope.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2022 &mdash; Aug 2023</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>REST web service development</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Rust, Actix, Serde<br />
-                  <b><i>Development Platform:</i></b> Windows<br />
-                  <b><i>Target Platform:</i></b> Linux<br />
-                </p>
-                <ul>
-                  <li>Independently developed a REST web service in Rust using the FFI for several image processing algorithms written in C/C++.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>3 days</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Setting up DevOps pipelines for packaging optimized builds of IPFS and IPFS Cluster programs</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Debian Package, Bash, GitHub Actions, YAML<br />
-                  <b><i>Development Platform:</i></b> Linux (AMD64)<br />
-                  <b><i>Target Platforms:</i></b> Linux (AMD64, ARM64)<br />
-                  <b><i>Repository URL</i></b>: <a href="https://github.com/sria91/ipfs-deb">GitHub</a><br />
-                </p>
-                <ul>
-                  <li>The software includes three debian packages: IPFS cluster, IPFS leader, IPFS follower.</li>
-                  <li>The cluster package is common and can be installed for all the target platforms.</li>
-                  <li>The leader and follower are mutually exclusive packages and hence, either of the two can be installed in a given platform.</li>
-                  <li>The ARM64 packages require an optimized build of openssl which was achieved through cross-compilation.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>6 days</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Functional safety software stack development</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> C<br />
-                  <b><i>Development Platform:</i></b> Linux<br />
-                  <b><i>Target Platforms:</i></b> ACRN, Yocto<br />
-                </p>
-                <ul>
-                  <li>Independently developed the temperature monitoring module of the software stack:</li>
-                  <ul>
-                    <li>The module uses a timer to run a handler periodically every 1 millisecond.</li>
-                    <li>The handler reads the temperature values using MSR & MMIO read.</li>
-                    <li>Then it sends out the values to the functional safety enabling hardware over the SPI protocol.</li>
-                  </ul>
-                  <li>Developed code for performing both correctable & uncorrectable error injections on the ECC memory.</li>
-                  <li>Benchmarking (with & without ECC enabled) of the RAM reading / writing speeds of the target using open-source tools.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2021 &mdash; May 2022</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Post-silicon Validation Automation</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Python, PowerShell<br />
-                  <b><i>Development Platform:</i></b> Windows<br />
-                  <b><i>Target Platforms:</i></b> Windows, Linux<br />
-                </p>
-                <ul>
-                  <li>Automation of validation testcases using a proprietary test automation framework.</li>
-                  <li>Worked actively on Crossproduct and <abbr title="(P)latform (R)untime (M)echanism">PRM</abbr> domains.</li>
-                  <li>Working as a consultant on software design & development and the framework know-how.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2021 &mdash; May 2022</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Backend & REST API development for Chatbot that performs log analysis</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Python, Flask, mongoDB (PyMongo), AxonIQ<br />
-                  <b><i>Development Platform:</i></b> Windows<br />
-                  <b><i>Target Platform:</i></b> Linux<br />
-                </p>
-                <ul>
-                  <li>A thermal csv log & a string containing the issue is obtained from the frontend using as POST request.</li>
-                  <li>Developed the core business logic for reading and parsing the thermal csv logs.</li>
-                  <li>Developed the code for dumping the parsed JSON log data into mongoDB & Axon repository for maintaining a history.</li>
-                  <li>Performs analysis on the JSON data to gain valuable insights on the issue.</li>
-                  <li>Suggests a solution as the response based on the analysis.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>3 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Maintenance of Windows OS installation tool</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> C#, .NET Framework, .NET Core, PowerShell<br />
-                  <b><i>Platform:</i></b> Windows<br />
-                </p>
-                <ul>
-                  <li>The legacy tool enables manual and automated installation of Windows using:</li>
-                  <ul>
-                    <li>Command-line mode (locally or using network).</li>
-                    <li>Graphical mode (locally or using network).</li>
-                    <li>Thumb drive mode (locally or using network).</li>
-                    <li>PXE mode (using network).</li>
-                  </ul>
-                  <li>Worked on maintenance and bug fixing of the tool.</li>
-                  <li>Also worked on development of the tool involving:</li>
-                  <ul>
-                    <li>Enabling automated Windows installation while using the thumb drive mode.</li>
-                    <li>Porting the tool from .NET Framework 4 to .NET Core.</li>
-                  </ul>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>16 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Maintenance of multimedia analysis tool</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Python, Flask<br />
-                  <b><i>Platform:</i></b> Windows<br />
-                </p>
-                <ul>
-                  <li>The legacy tool enables analysis of audio and video signals using a dedicated embedded hardware.</li>
-                  <li>The tool is useful for automatically identifying and logging audio and video issues resulting from hardware/firmware issues like:</li>
-                  <ul>
-                    <li>Absence of an audio signal.</li>
-                    <li>Drop-out of audio frames.</li>
-                    <li>Synchronization of audio and video.</li>
-                    <li>Video framerate drops.</li>
-                    <li>Absence of video signal.</li>
-                    <li>Unwanted screen rotation.</li>
-                  </ul>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>5 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>GNSS Log Analysis Framework (GLAF)</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Python, pandas, PySide2, NSIS, YAML, MVC<br />
-                  <b><i>Platform:</i></b> Windows<br />
-                </p>
-                <ul>
-                  <li>Involved developing of a GUI for assisting the developer in debugging the issues from GNSS logs.</li>
-                  <li>The GUI allows the user to import, analyze, annotate and visualize csv logs.</li>
-                  <li>Developed the complete frontend, backend and the core business logic using MVC.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>5 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>ThingG</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Python, PostgreSQL, Flask, scikit-learn, LoRa, Arduino, MQTT<br />
-                  <b><i>Development & Host Platform:</i></b> Linux<br />
-                  <b><i>Target Platform:</i></b> ESP-32<br />
-                </p>
-                <ul>
-                  <li>ThingG is a system for localization of assets within an indoor environment.</li>
-                  <li>The asset to be tracked is attached a small LoRa transceiver connected to an ESP-32 powered by a battery expected to power it for an year.</li>
-                  <li>The indoor environment has 3 LoRa transceivers each connected to an ESP-32 acting as gateways located in known positions. They are connected to the server over MQTT.</li>
-                  <li>The asset attached LoRa transceiver runs an embedded software to interface the LoRa and continuosly transmits heartbeat signals to the gateways.</li>
-                  <li>The gateways run an embedded software that measures the strength (RSSI) of the signals received from the asset and sends the data over MQTT to the server.</li>
-                  <li>The server runs a machine learning model that listens to the data from the server and converts the data into location of the asset.</li>
-                  <li>The location of the asset is then visualized on an indigenously developed dashboard allowing the user to track it.</li>
-                  <li>The project stood at the 2nd place in a developer hackathon organized by the company.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>4 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>iPLMS</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Python, PostgreSQL, OpenCV, scikit-learn, MQTT<br />
-                  <b><i>Development & Host Platform:</i></b> Linux<br />
-                  <b><i>Target Platform:</i></b> Raspberry Pi<br />
-                </p>
-                <ul>
-                  <li>iPLMS is a system for aiding users to find a vacant slot in a parking lot.</li>
-                  <li>The parking lot is equipped with an overhead camera connected to an edge computing device (Raspberry Pi).</li>
-                  <li>The device continuously captures the image of the parking lot, segments the slots and runs it through a machine learning model.</li>
-                  <li>The machine learning model then classifies each slot as being occupied or vacant and sends it over MQTT to the server.</li>
-                  <li>The server listens to the data from the server and visualizes the occupancy data on a dashboard.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>6 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>USB Device Testing Robot</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Embedded C++, Arduino, Grbl, Python, OpenCV, PySide2, scikit-learn<br />
-                  <b><i>Development & Host Platform:</i></b> Linux<br />
-                  <b><i>Target Platform:</i></b> Arduino<br />
-                </p>
-                <ul>
-                  <li>The robot is a 2d cartesian with the arm having a male USB end effector whose other side is connected to a computer.</li>
-                  <li>The robot also has a stationary panel with 5 numbered female USB connectors which can be connected to devices.</li>
-                  <li>The aim is to allow the computer to plug to multiple devices one by one and perform some testing on each device.</li>
-                  <li>The robot is run by an Arduino running the Grbl firmware and also equipped with a camera mounted on the moving arm.</li>
-                  <li>The camera helps in identification of the female connector and provides feedback for safe plugging and unplugging of the USB connector.</li>
-                  <li>There is a GUI developed which allows selection of a device, plugging, unplugging and also displays the camera's vision.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>10 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Deep learning based PCB asset classification and liveness detection robot</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Embedded C++, PostgreSQL, Arduino, Python, OpenCV, Flask, TensorFlow<br />
-                  <b><i>Development & Host Platform:</i></b> Linux<br />
-                  <b><i>Target Platforms:</i></b> ESP-32, Raspberry Pi Zero<br />
-                </p>
-                <ul>
-                  <li>The robot is a 1d cartesian with a shuttle that moves along a track with a station on the one end.</li>
-                  <li>The shuttle carries a Raspberry Pi Zero with a mounted camera and stops at predefined spots along the track.</li>
-                  <li>The whole system is mounted on the top of a long desk which hosts the PCB assets.</li>
-                  <li>The movement of the shuttle is controlled by an ESP-32 microcontroller.</li>
-                  <li>When the shuttle stops, the camera captures an image of the desk and sends it along with the liveness information over Wi-Fi to the server.</li>
-                  <li>The server runs the image through a deep learning model to classify the PCB asset if visible in the image.</li>
-                  <li>The PCB kind and the liveness information is then stored to the database for future usage.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>12 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Implementation and Validation of Vision-based Ground Target Geo-Localization for Miniature Aerial System (Masters' project work)</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> MATLAB, C#, Arduino, VMWare Workstation Player<br />
-                  <b><i>Development Platform:</i></b> Windows<br />
-                  <b><i>Target Platforms:</i></b> ArduPilotMega<br />
-                </p>
-                <p>The project work presented a computer vision based algorithm for accurate geo-localization of a ground target from an aerial image captured by the Miniature Aerial System (MAS).</p>
-                <ul>
-                  <li>The user identifies and selects the ground target in the image taken by the camera on board Miniature Aerial Vehicle (MAV).</li>
-                  <li>A computer vision based algorithm is developed for accurate geo-localization of a ground target from the aerial image using: MAV pose, Gimbal pose and Camera parameters.</li>
-                  <li>A method for generating synthetic aerial image for any given pose configuration of the MAV, the Gimbal and the Camera is developed.</li>
-                  <li>Implemented on MATLAB and validated with a custom build of FlightGear Flight Simulator.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>7.5 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>PhotoScenery for Realistic Scene Generation and Visualization in FlightGear (Masters' mini project)</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> OpenSceneGraph, Visual Studio, Bash, Python, CMake, Git, C++<br />
-                  <b><i>Platform:</i></b> Windows, Linux<br />
-                </p>
-                <p>The project involved generation of photo realistic scenery and visualization of a landscape in the FlightGear Flight Simulator.</p>
-                <ul>
-                  <li>The software runs on Windows as well as Linux.</li>
-                  <li>Built and installed FlightGear Flight Simulator from source using CMake.</li>
-                  <li>Derived a methodology for the generation of PhotoScenery and integrated with FlightGear.</li>
-                  <li>Performed Hardware-In-Loop Simulation (HILS) for Miniature Aerial System (MAS) control algorithm.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Design and Development of Robot Mechanisms, Vision and Control Algorithms</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> MATLAB, Embedded Linux, C/C++, SDL, GStreamer, Makefile, ARM NEON SIMD, DSP/BIOS RTOS<br />
-                  <b><i>Development & Host Platform:</i></b> Linux<br />
-                  <b><i>Target Platforms:</i></b> BeagleBoard-xM<br />
-                </p>
-                <p>The project was sponsored by Department of Science and Technology (DST), Government of India (GoI).</p>
-                <ul>
-                  <li>Designed and integrated embedded Linux platform on BeagleBoard-xM SBC using Ångström.</li>
-                  <li>Designed and developed a software framework in C++ for implementing image processing & computer vision applications on BeagleBoard-xM.</li>
-                  <li>Developed image processing kernels in Embedded C for TI DSP C64x+ for 7 target tracking algorithms and C intrinsics code for ARM NEON SIMD.</li>
-                  <li>Reduced algorithm execution time by a factor of up to 4.6.</li>
-                  <li>Optimized the target tracking algorithms for real-time (30fps) performance on BeagleBoard-xM.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>13 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>māhiya: Development of a Real Time Human Tracking Capability on a Mobile Platform</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> MATLAB, Embedded C/C++, EAGLE PCB Design, C/C++, OpenCV, Eclipse<br />
-                  <b><i>Development & Host Platform:</i></b> Linux<br />
-                  <b><i>Target Platforms:</i></b> AVR<br />
-                </p>
-                <p>The project was sponsored by Centre for Artificial Intelligence and Robotics (CAIR), Defence Research and Development Organization (DRDO), Government of India (GoI).</p>
-                <ul>
-                  <li>Developed image-based visual servo controller for human following applications in C/C++.</li>
-                  <li>Developed kinematic pose-to-pose controller for differential drive mobile robot.</li>
-                  <li>Developed and optimized 7 human tracking algorithms for real-time (30fps) performance.</li>
-                  <li>Developed the interface for a sensor ring of 12 ultrasound range finders in Embedded C.</li>
-                  <li>Integrated the tracking algorithms with the controller for human following applications.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>10.5 months</h6>
-              </div>
-            </td>
-          </tr>
-
-        </table>
-        <br />
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom">
-        <h2 class="sria91-text-navyblue w3-padding-16"><i class="fa fa-university fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Academic / Research Projects</h2>
-        <table class="w3-table w3-bordered">
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Autonomous Mobile Robot Control, Localization and Path Planning (Bachelors' project work)</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> MATLAB, Embedded C<br />
-                  <b><i>Development Platform:</i></b> Windows<br />
-                  <b><i>Target Platform:</i></b> AVR<br />
-                </p>
-                <ul>
-                  <li>Developed a 2D framework in MATLAB for simulating a differential drive mobile robot.</li>
-                  <li>The autonomous robot must navigate to any desired goal location in a known static indoor environment by taking an optimal and feasible path.</li>
-                  <li>Ultrasonic range finders perceive the environment and the robot localizes using extended Kalman filter (EKF).</li>
-                  <li>An intelligent path planning algorithm computes the path to be traversed.</li>
-                  <li>The robot motion control is achieved by using a kinematics based controller.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>16 months</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Soft-starter: Automatic star-delta starter using microcontroller (Diploma project work)</b></h5>
-                <p>
-                  <b><i>Platform:</i></b> 8051<br />
-                </p>
-                <ul>
-                  <li>The starter is necessary for starting a three phase induction motor.</li>
-                  <li>The project work involved development of an electronic starter used for starting a 230V 50A induction motor based on Atmel AT89S51 microcontroller.</li>
-                  <li>The motor is powered on in the start configuration and a timer is used to switch the motor configuration from star to delta after an adjustable time delay.</li>
-                  <li>A single phase prevention mechanism is also implemented to protect the motor in case of faults.</li>
-                </ul>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>4 months</h6>
-              </div>
-            </td>
-          </tr>
-
-        </table>
-        <br />
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom" id="open-source">
-        <h2 class="sria91-text-navyblue w3-padding-16"><i class="fab fa-osi fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Personal / Open Source Projects</h2>
-        <table class="w3-table w3-bordered">
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Uraga</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Rust<br />
-                  <b><i>Platforms:</i></b> Windows, Linux, macOS<br />
-                  An <b>intuitive</b> modern programming language in its early stages that aims to be both interpreted and compiled.
-                </p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-hammer fa-fw w3-margin-right"></i>Work in progress</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>reSTful</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Rust<br />
-                  <b><i>Platforms:</i></b> Windows, Linux, macOS<br />
-                  An <b>intuitive</b> new markup language in its very early stages.
-                </p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-hammer fa-fw w3-margin-right"></i>Work in progress</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>translitera</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Python, JSON<br />
-                  A python package to phonetically transliterate text from Kannaḍa script to English / Latin characters.
-                </p>
-                <p><a href="https://pypi.python.org/pypi/translitera">PyPI page</a> | <a href="https://github.com/sria91/translitera">GitHub link</a></p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1 week</span></h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>SerialTerminal</b></h5>
-                <p>
-                  <b><i>Technologies:</i></b> Python, PyQt, YAML<br />
-                  A simple Serial Terminal application written in PyQt.
-                </p>
-                <p><a href="https://github.com/sria91/SerialTerminal">GitHub link</a></p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1 week</span></h6>
-              </div>
-            </td>
-          </tr>
-
-        </table>
-        <br />
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom" id="publications">
-        <h2 class="sria91-text-navyblue w3-padding-16"><i class="fas fa-newspaper fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Publications</h2>
-        <table class="w3-table w3-bordered">
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Synthetic Aerial Image Generation for Miniature Aerial System</b></h5>
-                <h6><strong>Srikanth A</strong>, L P Prathyusha, VPS Naidu, L Krishnamurthy</h6>
-                <p>
-                  <abbr title="The (I)nstitute of (E)lectrical and (E)lectronics (E)ngineers">IEEE</abbr> <abbr title="(I)nternational Conference on (T)rends in (A)utomation, Communication and (C)omputation (T)echnologies">ITACT</abbr></cite>, <abbr title="(A)charya (I)nstitute of (T)echnology">AIT</abbr>, Beṅgaḷūru.
-                  [<a href="https://doi.org/10.1109/ITACT.2015.7492685" target="_blank">link 1</a>] [<a href="/pdf/SA_201512_ITACT.pdf" target="_blank">link 2</a>]
-                </p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2015</span></h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>MAS Simulator: A Laboratory Set Up</b></h5>
-                <h6>Indhu B, <strong>Srikanth A</strong>, N Sivakumaran, VPS Naidu</h6>
-                <p>
-                  <cite><abbr title="International Conference on (C)ognitive (C)omputing and (I)nformation (P)rocessing">CCIP</abbr></cite>, <abbr title="(J)agadguru (S)ri (S)hivarathreeshwara (A)cademy of (T)echnical (E)ducation">JSSATE</abbr>, <abbr title="(N)ew (O)khla (I)ndustrial (D)evelopment (A)uthority">NOIDA</abbr>.
-                  [<a href="http://dx.doi.org/10.1109/CCIP.2015.7100734" target="_blank">link 1</a>] [<a href="http://nal-ir.nal.res.in/id/eprint/12104" target="_blank">link 2</a>]
-                </p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2015</span></h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue" itemscope itemtype="http://schema.org/ScholarlyArticle">
-                <h5 class="w3-opacity sria91-text-navyblue"><b><q>Photoscenery for Realistic Scene Generation and Visualization in FlightGear: A Tutorial</q></b></h5>
-                <h6><span itemprop="author"><strong>Srikanth A</strong></span>, Indhu B, L Krishnamurthy, VPS Naidu</h6>
-                <p>
-                  <cite><abbr title="(I)nternational (C)onference on (E)merging (T)rends in (E)lectrical (S)ystems">ICETES</abbr></cite>, <abbr title="(M)ar (A)thanasius (C)ollege of (E)ngineering">MACE</abbr>, Kēraḷa.
-                </p>
-                <p>
-                  <cite itemprop="isPartOf" itemscope itemtype="http://schema.org/Periodical">IJAREEIE</cite>, <span itemprop="isPartOf" itemscope itemtype="http://schema.org/PublicationVolume">Vol. <span itemprop="volumeNumber">3</span></span>, <span itemprop="isPartOf" itemscope itemtype="http://schema.org/PublicationIssue">Special Issue <span itemprop="issueNumber">5</span></span>, p. <span itemprop="pageStart">577</span>-<span itemprop="pageEnd">582</span>.
-                  [<a itemprop="sameAs" href="https://www.academia.edu/20520528/Photoscenery_for_Realistic_Scene_Generation_and_Visualization_in_FlightGear_A_Tutorial" target="_blank">link 1</a>] [<a itemprop="sameAs" href="/pdf/SA_201412_IJAREEIE.pdf" target="_blank">link 2</a>]
-                </p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2014</span></h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b><q>Robotics Research at <abbr title="(N)itte (M)eenakshi (I)nstitute of (T)echnology">NMIT</abbr></q></b></h5>
-                <h6>Jharna Majumdar, Sunil Kumar H N, Praveen Kumar Jain R, Venkatesh G M, <strong>Srikanth A</strong>, Sandeep Kumar Malu</h6>
-                <p>
-                  <cite><abbr title="(I)ndian (T)echnology (C)ongress">ITC</abbr></cite>, Beṅgaḷūru.
-                </p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2013</span></h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b><q>Development, Implementation and Optimization of Real Time Target Tracking Algorithms on BeagleBoard-xM</q></b></h5>
-                <h6><strong>Srikanth A</strong></h6>
-                <p>
-                  [<a href="https://www.academia.edu/30933470/Development_Implementation_and_Optimization_of_Real_Time_Target_Tracking_Algorithms_on_BeagleBoard-xM" target="_blank">link 1</a>] [<a href="/pdf/SA_2012-2013_BBxM.pdf" target="_blank">link 2</a>]
-                </p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 &mdash; 2013</span></h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b><q>Vision based Interactive Robotic Exhibits for Museums</q></b></h5>
-                <h6>Jharna Majumdar, Ramesh Babu, Sunil Kumar H S, Manjunath H N, Praveen K Jain, Venkatesh G M, <strong>Srikanth A</strong>, Gurinder S Gill</h6>
-                <p>
-                  <cite><abbr title="The (I)nstitute of (E)lectrical and (E)lectronics (E)ngineers">IEEE</abbr> <abbr title="First IEEE International Symposium on Cost&ndash;Effective Museum Exhibits in Engineering and Applied Science">Exhibits 2012</abbr></cite>, Braj Mohan Birla Science Centre, Haidarābād.
-                  [<a href="http://sites.ieee.org/exhibits2012/files/2012/03/Jharna-Majumdar-Abstract-ES009.pdf" target="_blank">link 1</a>] [<a href="/pdf/SA_201212_IEEEExhibits.pdf" target="_blank">link 2</a>]
-                </p>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2012</span></h6>
-              </div>
-            </td>
-          </tr>
-
-        </table>
-        <br />
-      </div>
-
-      <div class="w3-container w3-card w3-white w3-margin-bottom" id="certifications">
-        <h2 class="sria91-text-navyblue w3-padding-16"><i class="fas fa-certificate fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Certifications</h2>
-        <table class="w3-table w3-bordered">
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Architecting with Google Kubernetes Engine Specialization</b> from Coursera &mdash; Google</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2022</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Software Architecture Foundations</b> by LinkedIn Learning</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2022</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Software Architecture: From Developer to Architect</b> by LinkedIn Learning</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2022</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Programming Foundations: Test Driven Development</b> by LinkedIn Learning</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2022</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Advanced Design Patterns: Design Principles</b> by LinkedIn Learning</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2022</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Programming Foundations: Object Oriented Design</b> by LinkedIn Learning</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2021</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Rust Essential Training</b> from LinkedIn Learning</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2021</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>C++ Best Practices for Developers</b> from LinkedIn Learning</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2021</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Rewriting Git History</b> from Pluralsight</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Apr 2021</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Working with Git Branches</b> from Pluralsight</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Apr 2021</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Mastering Git</b> from Pluralsight</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2017</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>How Git Works</b> from Pluralsight</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2017</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Python Desktop Application Development</b> from Pluralsight</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2017</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>JavaScript Basics</b> from Solo Learn</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2016</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>HTML Fundamentals</b> from Solo Learn</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2015</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>SQL Fundamentals</b> from Solo Learn</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2015</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Introduction to Linux</b> from edX &mdash; The Linux Foundation</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2015</h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Internals of PC</b> from Escube IT Systems Solutions, Beṅgaḷūru</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"></h6>
-              </div>
-            </td>
-          </tr>
-
-          <tr>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h5 class="w3-opacity sria91-text-navyblue"><b>Diploma in Office Management Application</b> from MVS Computer Institute, Yalahaṅka</h5>
-              </div>
-            </td>
-            <td>
-              <div class="w3-container sria91-text-navyblue">
-                <h6 class="sria91-text-navyblue"></h6>
-              </div>
-            </td>
-          </tr>
-
-        </table>
-        <br />
-      </div>
-
-    <!-- End Right Column -->
+    <!-- Navbar on small screens -->
+    <div id="navbar-small" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="#skills" class="w3-bar-item w3-button w3-padding-large">Skills</a>
+      <a href="#competencies" class="w3-bar-item w3-button w3-padding-large">Competencies</a>
+      <a href="#natural-languages" class="w3-bar-item w3-button w3-padding-large">Languages</a>
+      <a href="#projects" class="w3-bar-item w3-button w3-padding-large">Projects</a>
+      <a href="#publications" class="w3-bar-item w3-button w3-padding-large">Publications</a>
+      <a href="#certifications" class="w3-bar-item w3-button w3-padding-large">Certifications</a>
+      <a href="https://blog.srikanth.one/" class="w3-bar-item w3-button w3-padding-large">Blog</a>
     </div>
-
-  <!-- End Grid -->
   </div>
 
-  <!-- End Page Container -->
-</div>
+  <!-- Page Container -->
+  <div class="w3-content w3-margin-top" style="max-width:1400px;padding:48px 0px 0px 0px">
 
-<footer class="w3-container sria91-indiagreen w3-center w3-margin-top" itemscope itemtype="http://schema.org/Person">
-  <p>Find me on social media.</p>
-  <a itemprop="sameAs" href="https://in.linkedin.com/in/srikanthanantharam"><i class="fab fa-linkedin w3-xxlarge w3-hover-opacity"></i></a>
-  <a itemprop="sameAs" href="https://www.hackerrank.com/sria91"><i class="fab fa-hackerrank w3-xxlarge w3-hover-opacity"></i></a>
-  <a itemprop="sameAs" href="https://www.facebook.com/sria91"><i class="fab fa-facebook w3-xxlarge w3-hover-opacity"></i></a>
-  <a itemprop="sameAs" href="https://www.instagram.com/sria91"><i class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i></a>
-  <a itemprop="sameAs" href="https://www.github.com/sria91"><i class="fab fa-github w3-xxlarge w3-hover-opacity"></i></a>
-  <a itemprop="sameAs" href="https://twitter.com/sria91"><i class="fab fa-twitter w3-xxlarge w3-hover-opacity"></i></a>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a></p>
-  <p>© 2022 <span itemprop="name">Srikanth Anantharam</span>.</p>
-</footer>
+    <!-- The Grid -->
+    <div class="w3-row-padding">
 
-<script>
-  function onSubmit(token) {
-    document.getElementById("contact-me-form").submit();
-  }
-</script>
+      <!-- Left Column -->
+      <div class="w3-third">
 
-<script>
-  // Used to toggle the menu on small screens when clicking on the menu button
-  function myFunction() {
-    var x = document.getElementById("navbar-small");
-    if (x.className.indexOf("w3-show") == -1) {
-      x.className += " w3-show";
-    } else {
-      x.className = x.className.replace(" w3-show", "");
+        <div class="w3-white sria91-text-navyblue w3-card-4">
+          <div class="w3-display-container">
+            <img src="SrikanthAnantharam.jpg" style="width:100%" alt="Avatar">
+          </div>
+          <div class="w3-container sria91-text-navyblue">
+            <h1>Srikanth Anantharam</h1>
+            <p><i class="fa fa-laptop-code fa-fw w3-margin-right w3-large sria91-text-navyblue"></i>Software
+              Practitioner | Lifelong Learner</p>
+            <p><i class="fa fa-home fa-fw w3-margin-right w3-large sria91-text-navyblue"></i>Beṅgaḷūru, India</p>
+            <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large sria91-text-navyblue"></i><a
+                href="mailto:contact@srikanth.one">contact@srikanth.one</a></p>
+            <p><i class="fa fa-phone fa-fw w3-margin-right w3-large sria91-text-navyblue"></i><a
+                href="tel:+917204350429">+91 7204 350 429</a></p>
+            <hr>
+
+            <p class="w3-large" id="skills"><b><i
+                  class="fa fa-asterisk fa-fw w3-margin-right sria91-text-navyblue"></i>Soft Skills</b></p>
+            <p>Team Player</p>
+            <p>Collaborator</p>
+            <p>Communicator</p>
+            <p>Innovator</p>
+            <p>Planner</p>
+            <p>Thinker</p>
+            <hr>
+
+            <p class="w3-large w3-text-theme" id="competencies"><b><i
+                  class="fa fa-list fa-fw w3-margin-right sria91-text-navyblue"></i>Core Competencies</b></p>
+            <p>Embedded Systems</p>
+            <p>Systems Programming</p>
+            <p>Web Development</p>
+            <p>Application Development</p>
+            <p>Automation and Robotics Engineering</p>
+            <p>Image Processing and Computer Vision</p>
+            <p>Image Analysis and Pattern Recognition</p>
+            <p>Artificial Intelligence</p>
+            <p>Requirements Gathering</p>
+            <p>Testing and Troubleshooting</p>
+            <p>DevOps Engineering</p>
+            <p>Client Relationship Management</p>
+            <hr>
+
+            <p class="w3-large w3-text-theme" id="natural-languages"><b><i
+                  class="fa fa-language fa-fw w3-margin-right sria91-text-navyblue"></i>Natural Languages</b></p>
+            <p>English</p>
+            <p>Kannada</p>
+            <p>Hindi</p>
+            <p>Telugu</p>
+          </div>
+        </div><br>
+
+        <!-- End Left Column -->
+      </div>
+
+      <!-- Right Column -->
+      <div class="w3-twothird">
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom" id="highlights">
+          <h2 class="sria91-text-navyblue w3-padding-16"><i
+              class="fa fa-highlighter fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Highlights</h2>
+          <div class="w3-container sria91-text-navyblue">
+            <ul>
+              <li>An achievement-driven <b>versatile Software Practitioner with nearly 8 years of rich and extensive
+                  experience</b></li>
+              <li><b>Skilled at analyzing information system needs</b>, evaluating end-user requirements, designing
+                custom solutions and troubleshooting complex information systems</li>
+              <li><b>Multi-disciplinary exposure gained by working</b> in a variety of proofs-of-concept & projects
+                related to Sensor Fusion, Robotics, Image Processing, Embedded Systems, Internet of Things, Artificial
+                Intelligence, Test Automation & Functional Safety</li>
+              <li><b>Proficient at maintaining quality of applications</b>, delivering high-quality customer experience
+                while adhering to the SLAs and work processes</li>
+              <li>Experienced in using various <b>software development methodologies such as Agile</b>, Scrum,
+                Waterfall, etc</li>
+              <li>Capable of <b>recognizing prospects to improve current software</b> by employing innovative
+                problem-solving techniques, optimizing code, and strategically integrating new features</li>
+              <li>Extensive experience in developing applications using various programming languages <b>such as Rust,
+                  Python, C++, C</b> and MATLAB; also familiar with C#, HTML, CSS and JavaScript</li>
+              <li>Well versed in using <b>Linux and Windows</b> operating systems; also familiar with <b>macOS</b></li>
+              <li><b>Highly skilled in Build / Release / Software Configuration using various DevOps tools</b> such as
+                Visual Studio, Visual Studio Code, Eclipse, PyCharm, MATLAB, Git, GitHub, GitLab, Travis, AppVeyor,
+                Jira, Confluence, Jenkins, MSBuild, CMake, Make, Docker, Kubernetes, AWS, Google Cloud, etc</li>
+              <li>Profound hands-on <b>experience with embedded</b> micro-computers like: NVIDIA Jetson Nano, Intel
+                Movidius NCS, Raspberry Pi, BeagleBoard-xM, Arduino, mbed, 8051</li>
+              <li><b>Experience with hardware/software interfacing technologies</b> like: <abbr
+                  title="(U)niversal (A)synchronous (R)eceiver (T)ransmitter">UART</abbr>, <abbr
+                  title="(I)nter (I)ntegrated (C)ommunication">I<sup>2</sup>C</abbr>, <abbr
+                  title="(S)ystem (M)anagement (Bus)">SMBus</abbr>, <abbr
+                  title="(S)erial (P)eripheral (I)nterface">SPI</abbr>, <abbr
+                  title="(P)ulse (W)idth (M)odulation">PWM</abbr>, <abbr
+                  title="(G)eneral (P)urpose (I)nput (O)output">GPIO</abbr></li>
+              <li><b>Strong work ethic</b>, positive attitude and leadership qualities with ability to work
+                independently and in a team environment</li>
+              <li>Passionate about <b>learning new technologies and keeping up with the latest trends</b></li>
+            </ul>
+          </div>
+          <hr />
+        </div>
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom" id="projects">
+          <h2 class="sria91-text-navyblue w3-padding-16"><i
+              class="fa fa-project-diagram fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Industrial
+            Projects</h2>
+          <table class="w3-table w3-bordered">
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Development of ConCal module for SDV</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Rust<br />
+                    <b><i>Platform:</i></b> Android Automotive OS<br />
+                  </p>
+                  <ul>
+                    <li>Development of ConCal module within the SDV software stack.</li>
+                    <li>The module is responsible for managing the configuration and calibration of the SDV.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2024 &mdash;
+                    Oct 2024</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Development of an S3 Cache system</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Rust, Actix, AWS SDK for Rust<br />
+                    <b><i>Platform:</i></b> Linux<br />
+                  </p>
+                  <ul>
+                    <li>Development of S3 Cache for leading NA based Robo taxi OEM.</li>
+                    <li>Developed the caching+eviction algorithm and features like database, file handling, http(s)
+                      frontend.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2024 &mdash;
+                    Jul 2024</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>DevOps Automation for Embedded build system</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Yocto, Jenkins<br />
+                    <b><i>Platform:</i></b> Linux<br />
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2023 &mdash;
+                    Feb 2024</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Design and development of dot blot detection and
+                      analysis algorithm</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> C++, Python, OpenCV<br />
+                    <b><i>Platform:</i></b> macOS, Windows, Linux (Cloud)<br />
+                  </p>
+                  <ul>
+                    <li>Developed an image processing algorithm for detection and analysis of dot blots.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2023 &mdash;
+                    Aug 2023</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Linear spectral unmixing of hyperspectral images from
+                      dot blot and western blot</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Python<br />
+                    <b><i>Platform:</i></b> Windows<br />
+                  </p>
+                  <ul>
+                    <li>It is common to see bleed-through in hyperspectral images when there is overlap in the emission
+                      spectrum of the contributing fluorophores.</li>
+                    <li>When not accounted for, this bleed-through will lead to inaccurate analysis results.</li>
+                    <li>Developed linear spectral unmixing algorithm for eliminating the bleed-through from a set of
+                      images (with up to 4 fluorophores) captured by a widefield microscope.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2022 &mdash;
+                    Aug 2023</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>REST web service development</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Rust, Actix, Serde<br />
+                    <b><i>Development Platform:</i></b> Windows<br />
+                    <b><i>Target Platform:</i></b> Linux<br />
+                  </p>
+                  <ul>
+                    <li>Independently developed a REST web service in Rust using the FFI for several image processing
+                      algorithms written in C/C++.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>3 days</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Setting up DevOps pipelines for packaging optimized
+                      builds of IPFS and IPFS Cluster programs</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Debian Package, Bash, GitHub Actions, YAML<br />
+                    <b><i>Development Platform:</i></b> Linux (AMD64)<br />
+                    <b><i>Target Platforms:</i></b> Linux (AMD64, ARM64)<br />
+                    <b><i>Repository URL</i></b>: <a href="https://github.com/sria91/ipfs-deb">GitHub</a><br />
+                  </p>
+                  <ul>
+                    <li>The software includes three debian packages: IPFS cluster, IPFS leader, IPFS follower.</li>
+                    <li>The cluster package is common and can be installed for all the target platforms.</li>
+                    <li>The leader and follower are mutually exclusive packages and hence, either of the two can be
+                      installed in a given platform.</li>
+                    <li>The ARM64 packages require an optimized build of openssl which was achieved through
+                      cross-compilation.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>6 days</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Functional safety software stack development</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> C<br />
+                    <b><i>Development Platform:</i></b> Linux<br />
+                    <b><i>Target Platforms:</i></b> ACRN, Yocto<br />
+                  </p>
+                  <ul>
+                    <li>Independently developed the temperature monitoring module of the software stack:</li>
+                    <ul>
+                      <li>The module uses a timer to run a handler periodically every 1 millisecond.</li>
+                      <li>The handler reads the temperature values using MSR & MMIO read.</li>
+                      <li>Then it sends out the values to the functional safety enabling hardware over the SPI protocol.
+                      </li>
+                    </ul>
+                    <li>Developed code for performing both correctable & uncorrectable error injections on the ECC
+                      memory.</li>
+                    <li>Benchmarking (with & without ECC enabled) of the RAM reading / writing speeds of the target
+                      using open-source tools.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2021 &mdash;
+                    May 2022</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Post-silicon Validation Automation</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Python, PowerShell<br />
+                    <b><i>Development Platform:</i></b> Windows<br />
+                    <b><i>Target Platforms:</i></b> Windows, Linux<br />
+                  </p>
+                  <ul>
+                    <li>Automation of validation testcases using a proprietary test automation framework.</li>
+                    <li>Worked actively on Crossproduct and <abbr title="(P)latform (R)untime (M)echanism">PRM</abbr>
+                      domains.</li>
+                    <li>Working as a consultant on software design & development and the framework know-how.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2021 &mdash;
+                    May 2022</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Backend & REST API development for Chatbot that
+                      performs log analysis</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Python, Flask, mongoDB (PyMongo), AxonIQ<br />
+                    <b><i>Development Platform:</i></b> Windows<br />
+                    <b><i>Target Platform:</i></b> Linux<br />
+                  </p>
+                  <ul>
+                    <li>A thermal csv log & a string containing the issue is obtained from the frontend using as POST
+                      request.</li>
+                    <li>Developed the core business logic for reading and parsing the thermal csv logs.</li>
+                    <li>Developed the code for dumping the parsed JSON log data into mongoDB & Axon repository for
+                      maintaining a history.</li>
+                    <li>Performs analysis on the JSON data to gain valuable insights on the issue.</li>
+                    <li>Suggests a solution as the response based on the analysis.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>3 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Maintenance of Windows OS installation tool</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> C#, .NET Framework, .NET Core, PowerShell<br />
+                    <b><i>Platform:</i></b> Windows<br />
+                  </p>
+                  <ul>
+                    <li>The legacy tool enables manual and automated installation of Windows using:</li>
+                    <ul>
+                      <li>Command-line mode (locally or using network).</li>
+                      <li>Graphical mode (locally or using network).</li>
+                      <li>Thumb drive mode (locally or using network).</li>
+                      <li>PXE mode (using network).</li>
+                    </ul>
+                    <li>Worked on maintenance and bug fixing of the tool.</li>
+                    <li>Also worked on development of the tool involving:</li>
+                    <ul>
+                      <li>Enabling automated Windows installation while using the thumb drive mode.</li>
+                      <li>Porting the tool from .NET Framework 4 to .NET Core.</li>
+                    </ul>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>16 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Maintenance of multimedia analysis tool</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Python, Flask<br />
+                    <b><i>Platform:</i></b> Windows<br />
+                  </p>
+                  <ul>
+                    <li>The legacy tool enables analysis of audio and video signals using a dedicated embedded hardware.
+                    </li>
+                    <li>The tool is useful for automatically identifying and logging audio and video issues resulting
+                      from hardware/firmware issues like:</li>
+                    <ul>
+                      <li>Absence of an audio signal.</li>
+                      <li>Drop-out of audio frames.</li>
+                      <li>Synchronization of audio and video.</li>
+                      <li>Video framerate drops.</li>
+                      <li>Absence of video signal.</li>
+                      <li>Unwanted screen rotation.</li>
+                    </ul>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>5 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>GNSS Log Analysis Framework (GLAF)</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Python, pandas, PySide2, NSIS, YAML, MVC<br />
+                    <b><i>Platform:</i></b> Windows<br />
+                  </p>
+                  <ul>
+                    <li>Involved developing of a GUI for assisting the developer in debugging the issues from GNSS logs.
+                    </li>
+                    <li>The GUI allows the user to import, analyze, annotate and visualize csv logs.</li>
+                    <li>Developed the complete frontend, backend and the core business logic using MVC.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>5 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>ThingG</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Python, PostgreSQL, Flask, scikit-learn, LoRa, Arduino, MQTT<br />
+                    <b><i>Development & Host Platform:</i></b> Linux<br />
+                    <b><i>Target Platform:</i></b> ESP-32<br />
+                  </p>
+                  <ul>
+                    <li>ThingG is a system for localization of assets within an indoor environment.</li>
+                    <li>The asset to be tracked is attached a small LoRa transceiver connected to an ESP-32 powered by a
+                      battery expected to power it for an year.</li>
+                    <li>The indoor environment has 3 LoRa transceivers each connected to an ESP-32 acting as gateways
+                      located in known positions. They are connected to the server over MQTT.</li>
+                    <li>The asset attached LoRa transceiver runs an embedded software to interface the LoRa and
+                      continuosly transmits heartbeat signals to the gateways.</li>
+                    <li>The gateways run an embedded software that measures the strength (RSSI) of the signals received
+                      from the asset and sends the data over MQTT to the server.</li>
+                    <li>The server runs a machine learning model that listens to the data from the server and converts
+                      the data into location of the asset.</li>
+                    <li>The location of the asset is then visualized on an indigenously developed dashboard allowing the
+                      user to track it.</li>
+                    <li>The project stood at the 2nd place in a developer hackathon organized by the company.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>4 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>iPLMS</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Python, PostgreSQL, OpenCV, scikit-learn, MQTT<br />
+                    <b><i>Development & Host Platform:</i></b> Linux<br />
+                    <b><i>Target Platform:</i></b> Raspberry Pi<br />
+                  </p>
+                  <ul>
+                    <li>iPLMS is a system for aiding users to find a vacant slot in a parking lot.</li>
+                    <li>The parking lot is equipped with an overhead camera connected to an edge computing device
+                      (Raspberry Pi).</li>
+                    <li>The device continuously captures the image of the parking lot, segments the slots and runs it
+                      through a machine learning model.</li>
+                    <li>The machine learning model then classifies each slot as being occupied or vacant and sends it
+                      over MQTT to the server.</li>
+                    <li>The server listens to the data from the server and visualizes the occupancy data on a dashboard.
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>6 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>USB Device Testing Robot</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Embedded C++, Arduino, Grbl, Python, OpenCV, PySide2, scikit-learn<br />
+                    <b><i>Development & Host Platform:</i></b> Linux<br />
+                    <b><i>Target Platform:</i></b> Arduino<br />
+                  </p>
+                  <ul>
+                    <li>The robot is a 2d cartesian with the arm having a male USB end effector whose other side is
+                      connected to a computer.</li>
+                    <li>The robot also has a stationary panel with 5 numbered female USB connectors which can be
+                      connected to devices.</li>
+                    <li>The aim is to allow the computer to plug to multiple devices one by one and perform some testing
+                      on each device.</li>
+                    <li>The robot is run by an Arduino running the Grbl firmware and also equipped with a camera mounted
+                      on the moving arm.</li>
+                    <li>The camera helps in identification of the female connector and provides feedback for safe
+                      plugging and unplugging of the USB connector.</li>
+                    <li>There is a GUI developed which allows selection of a device, plugging, unplugging and also
+                      displays the camera's vision.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>10 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Deep learning based PCB asset classification and
+                      liveness detection robot</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Embedded C++, PostgreSQL, Arduino, Python, OpenCV, Flask,
+                    TensorFlow<br />
+                    <b><i>Development & Host Platform:</i></b> Linux<br />
+                    <b><i>Target Platforms:</i></b> ESP-32, Raspberry Pi Zero<br />
+                  </p>
+                  <ul>
+                    <li>The robot is a 1d cartesian with a shuttle that moves along a track with a station on the one
+                      end.</li>
+                    <li>The shuttle carries a Raspberry Pi Zero with a mounted camera and stops at predefined spots
+                      along the track.</li>
+                    <li>The whole system is mounted on the top of a long desk which hosts the PCB assets.</li>
+                    <li>The movement of the shuttle is controlled by an ESP-32 microcontroller.</li>
+                    <li>When the shuttle stops, the camera captures an image of the desk and sends it along with the
+                      liveness information over Wi-Fi to the server.</li>
+                    <li>The server runs the image through a deep learning model to classify the PCB asset if visible in
+                      the image.</li>
+                    <li>The PCB kind and the liveness information is then stored to the database for future usage.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>12 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Implementation and Validation of Vision-based Ground
+                      Target Geo-Localization for Miniature Aerial System (Masters' project work)</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> MATLAB, C#, Arduino, VMWare Workstation Player<br />
+                    <b><i>Development Platform:</i></b> Windows<br />
+                    <b><i>Target Platforms:</i></b> ArduPilotMega<br />
+                  </p>
+                  <p>The project work presented a computer vision based algorithm for accurate geo-localization of a
+                    ground target from an aerial image captured by the Miniature Aerial System (MAS).</p>
+                  <ul>
+                    <li>The user identifies and selects the ground target in the image taken by the camera on board
+                      Miniature Aerial Vehicle (MAV).</li>
+                    <li>A computer vision based algorithm is developed for accurate geo-localization of a ground target
+                      from the aerial image using: MAV pose, Gimbal pose and Camera parameters.</li>
+                    <li>A method for generating synthetic aerial image for any given pose configuration of the MAV, the
+                      Gimbal and the Camera is developed.</li>
+                    <li>Implemented on MATLAB and validated with a custom build of FlightGear Flight Simulator.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>7.5 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>PhotoScenery for Realistic Scene Generation and
+                      Visualization in FlightGear (Masters' mini project)</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> OpenSceneGraph, Visual Studio, Bash, Python, CMake, Git, C++<br />
+                    <b><i>Platform:</i></b> Windows, Linux<br />
+                  </p>
+                  <p>The project involved generation of photo realistic scenery and visualization of a landscape in the
+                    FlightGear Flight Simulator.</p>
+                  <ul>
+                    <li>The software runs on Windows as well as Linux.</li>
+                    <li>Built and installed FlightGear Flight Simulator from source using CMake.</li>
+                    <li>Derived a methodology for the generation of PhotoScenery and integrated with FlightGear.</li>
+                    <li>Performed Hardware-In-Loop Simulation (HILS) for Miniature Aerial System (MAS) control
+                      algorithm.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Design and Development of Robot Mechanisms, Vision and
+                      Control Algorithms</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> MATLAB, Embedded Linux, C/C++, SDL, GStreamer, Makefile, ARM NEON SIMD,
+                    DSP/BIOS RTOS<br />
+                    <b><i>Development & Host Platform:</i></b> Linux<br />
+                    <b><i>Target Platforms:</i></b> BeagleBoard-xM<br />
+                  </p>
+                  <p>The project was sponsored by Department of Science and Technology (DST), Government of India (GoI).
+                  </p>
+                  <ul>
+                    <li>Designed and integrated embedded Linux platform on BeagleBoard-xM SBC using Ångström.</li>
+                    <li>Designed and developed a software framework in C++ for implementing image processing & computer
+                      vision applications on BeagleBoard-xM.</li>
+                    <li>Developed image processing kernels in Embedded C for TI DSP C64x+ for 7 target tracking
+                      algorithms and C intrinsics code for ARM NEON SIMD.</li>
+                    <li>Reduced algorithm execution time by a factor of up to 4.6.</li>
+                    <li>Optimized the target tracking algorithms for real-time (30fps) performance on BeagleBoard-xM.
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>13 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>māhiya: Development of a Real Time Human Tracking
+                      Capability on a Mobile Platform</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> MATLAB, Embedded C/C++, EAGLE PCB Design, C/C++, OpenCV, Eclipse<br />
+                    <b><i>Development & Host Platform:</i></b> Linux<br />
+                    <b><i>Target Platforms:</i></b> AVR<br />
+                  </p>
+                  <p>The project was sponsored by Centre for Artificial Intelligence and Robotics (CAIR), Defence
+                    Research and Development Organization (DRDO), Government of India (GoI).</p>
+                  <ul>
+                    <li>Developed image-based visual servo controller for human following applications in C/C++.</li>
+                    <li>Developed kinematic pose-to-pose controller for differential drive mobile robot.</li>
+                    <li>Developed and optimized 7 human tracking algorithms for real-time (30fps) performance.</li>
+                    <li>Developed the interface for a sensor ring of 12 ultrasound range finders in Embedded C.</li>
+                    <li>Integrated the tracking algorithms with the controller for human following applications.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>10.5 months</h6>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+          <br />
+        </div>
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom">
+          <h2 class="sria91-text-navyblue w3-padding-16"><i
+              class="fa fa-university fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Academic / Research
+            Projects</h2>
+          <table class="w3-table w3-bordered">
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Autonomous Mobile Robot Control, Localization and Path
+                      Planning (Bachelors' project work)</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> MATLAB, Embedded C<br />
+                    <b><i>Development Platform:</i></b> Windows<br />
+                    <b><i>Target Platform:</i></b> AVR<br />
+                  </p>
+                  <ul>
+                    <li>Developed a 2D framework in MATLAB for simulating a differential drive mobile robot.</li>
+                    <li>The autonomous robot must navigate to any desired goal location in a known static indoor
+                      environment by taking an optimal and feasible path.</li>
+                    <li>Ultrasonic range finders perceive the environment and the robot localizes using extended Kalman
+                      filter (EKF).</li>
+                    <li>An intelligent path planning algorithm computes the path to be traversed.</li>
+                    <li>The robot motion control is achieved by using a kinematics based controller.</li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>16 months</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Soft-starter: Automatic star-delta starter using
+                      microcontroller (Diploma project work)</b></h5>
+                  <p>
+                    <b><i>Platform:</i></b> 8051<br />
+                  </p>
+                  <ul>
+                    <li>The starter is necessary for starting a three phase induction motor.</li>
+                    <li>The project work involved development of an electronic starter used for starting a 230V 50A
+                      induction motor based on Atmel AT89S51 microcontroller.</li>
+                    <li>The motor is powered on in the start configuration and a timer is used to switch the motor
+                      configuration from star to delta after an adjustable time delay.</li>
+                    <li>A single phase prevention mechanism is also implemented to protect the motor in case of faults.
+                    </li>
+                  </ul>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>4 months</h6>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+          <br />
+        </div>
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom" id="open-source">
+          <h2 class="sria91-text-navyblue w3-padding-16"><i
+              class="fab fa-osi fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Personal / Open Source
+            Projects</h2>
+          <table class="w3-table w3-bordered">
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Uraga</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Rust<br />
+                    <b><i>Platforms:</i></b> Windows, Linux, macOS<br />
+                    An <b>intuitive</b> modern programming language in its early stages that aims to be both interpreted
+                    and compiled.
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-hammer fa-fw w3-margin-right"></i>Work in progress
+                  </h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>reSTful</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Rust<br />
+                    <b><i>Platforms:</i></b> Windows, Linux, macOS<br />
+                    An <b>intuitive</b> new markup language in its very early stages.
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-hammer fa-fw w3-margin-right"></i>Work in progress
+                  </h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>translitera</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Python, JSON<br />
+                    A python package to phonetically transliterate text from Kannaḍa script to English / Latin
+                    characters.
+                  </p>
+                  <p><a href="https://pypi.python.org/pypi/translitera">PyPI page</a> | <a
+                      href="https://github.com/sria91/translitera">GitHub link</a></p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1 week</span>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>SerialTerminal</b></h5>
+                  <p>
+                    <b><i>Technologies:</i></b> Python, PyQt, YAML<br />
+                    A simple Serial Terminal application written in PyQt.
+                  </p>
+                  <p><a href="https://github.com/sria91/SerialTerminal">GitHub link</a></p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>1 week</span>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+          <br />
+        </div>
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom" id="publications">
+          <h2 class="sria91-text-navyblue w3-padding-16"><i
+              class="fas fa-newspaper fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Publications</h2>
+          <table class="w3-table w3-bordered">
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Synthetic Aerial Image Generation for Miniature Aerial
+                      System</b></h5>
+                  <h6><strong>Srikanth A</strong>, L P Prathyusha, VPS Naidu, L Krishnamurthy</h6>
+                  <p>
+                    <abbr title="The (I)nstitute of (E)lectrical and (E)lectronics (E)ngineers">IEEE</abbr> <abbr
+                      title="(I)nternational Conference on (T)rends in (A)utomation, Communication and (C)omputation (T)echnologies">ITACT</abbr></cite>,
+                    <abbr title="(A)charya (I)nstitute of (T)echnology">AIT</abbr>, Beṅgaḷūru.
+                    [<a href="https://doi.org/10.1109/ITACT.2015.7492685" target="_blank">link 1</a>] [<a
+                      href="/pdf/SA_201512_ITACT.pdf" target="_blank">link 2</a>]
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2015</span>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>MAS Simulator: A Laboratory Set Up</b></h5>
+                  <h6>Indhu B, <strong>Srikanth A</strong>, N Sivakumaran, VPS Naidu</h6>
+                  <p>
+                    <cite><abbr
+                        title="International Conference on (C)ognitive (C)omputing and (I)nformation (P)rocessing">CCIP</abbr></cite>,
+                    <abbr
+                      title="(J)agadguru (S)ri (S)hivarathreeshwara (A)cademy of (T)echnical (E)ducation">JSSATE</abbr>,
+                    <abbr title="(N)ew (O)khla (I)ndustrial (D)evelopment (A)uthority">NOIDA</abbr>.
+                    [<a href="http://dx.doi.org/10.1109/CCIP.2015.7100734" target="_blank">link 1</a>] [<a
+                      href="http://nal-ir.nal.res.in/id/eprint/12104" target="_blank">link 2</a>]
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Mar 2015</span>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue" itemscope itemtype="http://schema.org/ScholarlyArticle">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b><q>Photoscenery for Realistic Scene Generation and
+                        Visualization in FlightGear: A Tutorial</q></b></h5>
+                  <h6><span itemprop="author"><strong>Srikanth A</strong></span>, Indhu B, L Krishnamurthy, VPS Naidu
+                  </h6>
+                  <p>
+                    <cite><abbr
+                        title="(I)nternational (C)onference on (E)merging (T)rends in (E)lectrical (S)ystems">ICETES</abbr></cite>,
+                    <abbr title="(M)ar (A)thanasius (C)ollege of (E)ngineering">MACE</abbr>, Kēraḷa.
+                  </p>
+                  <p>
+                    <cite itemprop="isPartOf" itemscope itemtype="http://schema.org/Periodical">IJAREEIE</cite>, <span
+                      itemprop="isPartOf" itemscope itemtype="http://schema.org/PublicationVolume">Vol. <span
+                        itemprop="volumeNumber">3</span></span>, <span itemprop="isPartOf" itemscope
+                      itemtype="http://schema.org/PublicationIssue">Special Issue <span
+                        itemprop="issueNumber">5</span></span>, p. <span itemprop="pageStart">577</span>-<span
+                      itemprop="pageEnd">582</span>.
+                    [<a itemprop="sameAs"
+                      href="https://www.academia.edu/20520528/Photoscenery_for_Realistic_Scene_Generation_and_Visualization_in_FlightGear_A_Tutorial"
+                      target="_blank">link 1</a>] [<a itemprop="sameAs" href="/pdf/SA_201412_IJAREEIE.pdf"
+                      target="_blank">link 2</a>]
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2014</span>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b><q>Robotics Research at <abbr
+                          title="(N)itte (M)eenakshi (I)nstitute of (T)echnology">NMIT</abbr></q></b></h5>
+                  <h6>Jharna Majumdar, Sunil Kumar H N, Praveen Kumar Jain R, Venkatesh G M, <strong>Srikanth
+                      A</strong>, Sandeep Kumar Malu</h6>
+                  <p>
+                    <cite><abbr title="(I)ndian (T)echnology (C)ongress">ITC</abbr></cite>, Beṅgaḷūru.
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2013</span>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b><q>Development, Implementation and Optimization of Real
+                        Time Target Tracking Algorithms on BeagleBoard-xM</q></b></h5>
+                  <h6><strong>Srikanth A</strong></h6>
+                  <p>
+                    [<a
+                      href="https://www.academia.edu/30933470/Development_Implementation_and_Optimization_of_Real_Time_Target_Tracking_Algorithms_on_BeagleBoard-xM"
+                      target="_blank">link 1</a>] [<a href="/pdf/SA_2012-2013_BBxM.pdf" target="_blank">link 2</a>]
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>2012 &mdash;
+                    2013</span></h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b><q>Vision based Interactive Robotic Exhibits for
+                        Museums</q></b></h5>
+                  <h6>Jharna Majumdar, Ramesh Babu, Sunil Kumar H S, Manjunath H N, Praveen K Jain, Venkatesh G M,
+                    <strong>Srikanth A</strong>, Gurinder S Gill
+                  </h6>
+                  <p>
+                    <cite><abbr title="The (I)nstitute of (E)lectrical and (E)lectronics (E)ngineers">IEEE</abbr> <abbr
+                        title="First IEEE International Symposium on Cost&ndash;Effective Museum Exhibits in Engineering and Applied Science">Exhibits
+                        2012</abbr></cite>, Braj Mohan Birla Science Centre, Haidarābād.
+                    [<a href="http://sites.ieee.org/exhibits2012/files/2012/03/Jharna-Majumdar-Abstract-ES009.pdf"
+                      target="_blank">link 1</a>] [<a href="/pdf/SA_201212_IEEEExhibits.pdf" target="_blank">link 2</a>]
+                  </p>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2012</span>
+                  </h6>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+          <br />
+        </div>
+
+        <div class="w3-container w3-card w3-white w3-margin-bottom" id="certifications">
+          <h2 class="sria91-text-navyblue w3-padding-16"><i
+              class="fas fa-certificate fa-fw w3-margin-right w3-xxlarge sria91-text-navyblue"></i>Certifications</h2>
+          <table class="w3-table w3-bordered">
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Architecting with Google Kubernetes Engine
+                      Specialization</b> from Coursera &mdash; Google</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Aug 2022</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Software Architecture Foundations</b> by LinkedIn
+                    Learning</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2022</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Software Architecture: From Developer to Architect</b>
+                    by LinkedIn Learning</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2022</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Programming Foundations: Test Driven Development</b> by
+                    LinkedIn Learning</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Feb 2022</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Advanced Design Patterns: Design Principles</b> by
+                    LinkedIn Learning</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2022</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Programming Foundations: Object Oriented Design</b> by
+                    LinkedIn Learning</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2021</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Rust Essential Training</b> from LinkedIn Learning</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2021</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>C++ Best Practices for Developers</b> from LinkedIn
+                    Learning</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Dec 2021</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Rewriting Git History</b> from Pluralsight</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Apr 2021</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Working with Git Branches</b> from Pluralsight</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Apr 2021</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Mastering Git</b> from Pluralsight</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jul 2017</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>How Git Works</b> from Pluralsight</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2017</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Python Desktop Application Development</b> from
+                    Pluralsight</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jun 2017</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>JavaScript Basics</b> from Solo Learn</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Jan 2016</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>HTML Fundamentals</b> from Solo Learn</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2015</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>SQL Fundamentals</b> from Solo Learn</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2015</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Introduction to Linux</b> from edX &mdash; The Linux
+                    Foundation</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"><i class="fa fa-calendar fa-fw w3-margin-right"></i>Sep 2015</h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Internals of PC</b> from Escube IT Systems Solutions,
+                    Beṅgaḷūru</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"></h6>
+                </div>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h5 class="w3-opacity sria91-text-navyblue"><b>Diploma in Office Management Application</b> from MVS
+                    Computer Institute, Yalahaṅka</h5>
+                </div>
+              </td>
+              <td>
+                <div class="w3-container sria91-text-navyblue">
+                  <h6 class="sria91-text-navyblue"></h6>
+                </div>
+              </td>
+            </tr>
+
+          </table>
+          <br />
+        </div>
+
+        <!-- End Right Column -->
+      </div>
+
+      <!-- End Grid -->
+    </div>
+
+    <!-- End Page Container -->
+  </div>
+
+  <footer class="w3-container sria91-indiagreen w3-center w3-margin-top" itemscope itemtype="http://schema.org/Person">
+    <p>Find me on social media.</p>
+    <a itemprop="sameAs" href="https://in.linkedin.com/in/srikanthanantharam"><i
+        class="fab fa-linkedin w3-xxlarge w3-hover-opacity"></i></a>
+    <a itemprop="sameAs" href="https://www.hackerrank.com/sria91"><i
+        class="fab fa-hackerrank w3-xxlarge w3-hover-opacity"></i></a>
+    <a itemprop="sameAs" href="https://www.facebook.com/sria91"><i
+        class="fab fa-facebook w3-xxlarge w3-hover-opacity"></i></a>
+    <a itemprop="sameAs" href="https://www.instagram.com/sria91"><i
+        class="fab fa-instagram w3-xxlarge w3-hover-opacity"></i></a>
+    <a itemprop="sameAs" href="https://www.github.com/sria91"><i
+        class="fab fa-github w3-xxlarge w3-hover-opacity"></i></a>
+    <a itemprop="sameAs" href="https://twitter.com/sria91"><i
+        class="fab fa-twitter w3-xxlarge w3-hover-opacity"></i></a>
+    <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">W3.CSS</a></p>
+    <p>© 2022 <span itemprop="name">Srikanth Anantharam</span>.</p>
+  </footer>
+
+  <script>
+    function onSubmit(token) {
+      document.getElementById("contact-me-form").submit();
     }
-  }
-  // listen for click events originating from elements with href starting with #
-  $('body').on('click.scroll-adjust', '[href^="#"]', function (e) {
-    var $nav
+  </script>
 
-    // make sure navigation hasn't already been prevented
-    if ( e && e.isDefaultPrevented() ) return
+  <script>
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navbar-small");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    // listen for click events originating from elements with href starting with #
+    $('body').on('click.scroll-adjust', '[href^="#"]', function (e) {
+      var $nav
 
-    // get a reference to the offending navbar
-    $nav = $('#navbar')
+      // make sure navigation hasn't already been prevented
+      if (e && e.isDefaultPrevented()) return
 
-    // check if the navbar is fixed
-    if ( $nav.css('position') !== "fixed" ) return
+      // get a reference to the offending navbar
+      $nav = $('#navbar')
 
-    // listen for when the browser performs the scroll
-    $(window).one('scroll', function () {
-      // scroll the window up by the height of the navbar
-      window.scrollBy(0, -$nav.height())
+      // check if the navbar is fixed
+      if ($nav.css('position') !== "fixed") return
+
+      // listen for when the browser performs the scroll
+      $(window).one('scroll', function () {
+        // scroll the window up by the height of the navbar
+        window.scrollBy(0, -$nav.height())
+      });
+
     });
-
-  });
-</script>
+  </script>
 
 </body>
+
 </html>
